@@ -43,7 +43,7 @@ const HomeBanner=({ selectedCategory, setSelectedCategory }) =>{
   const banner = bannerTexts[selectedCategory] || bannerTexts['Automobiles'];
 
   return (
-    <div className="bg-white rounded shadow p-4 flex gap-4 max-w-7xl mx-auto">
+    <div className="bg-white rounded shadow p-4 flex gap-4 max-w-[1440px] mx-auto">
       {/* lft */}
       <div className="w-1/5">
         <ul className="bg-gray-50 border rounded p-2 space-y-1">
@@ -70,7 +70,7 @@ const HomeBanner=({ selectedCategory, setSelectedCategory }) =>{
             alt={banner.title}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center px-8 text-white z-10">
+          <div className="absolute inset-0  bg-opacity-30 flex flex-col justify-center px-8 text-white z-10">
             <p className="text-sm">{banner.subtitle}</p>
             <h2 className="text-3xl font-bold mb-4">{banner.title}</h2>
             <button className="bg-white text-gray-900 font-semibold px-4 py-2 rounded w-fit hover:bg-gray-100 transition">

@@ -4,11 +4,11 @@ const Header = () => {
   return (
     <header className="w-full shadow-md">
       
-      <div className="bg-white px-6 py-3 flex justify-between items-center max-w-screen-xl mx-auto">
+      <div className="bg-white px-4 py-6 flex justify-between items-center max-w-[1440px] mx-auto">
         
       
         <div className="flex items-center gap-2">
-          <img src="/images/logo-symbol.png" alt="Logo" className="h-8 w-8" />
+          <img src="/images/home/logo-symbol.png" alt="Logo" className="h-8 w-8" />
           <span className="text-lg font-bold text-[#0D6EFD]">Brand</span>
         </div>
 

@@ -27,7 +27,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-100 text-gray-700 pt-10">
+    <footer className="bg-gray-100 text-gray-700 pt-10 ">
       
       <div className="bg-white w-full px-6 py-10 shadow">
         <div className="max-w-screen-xl mx-auto flex flex-col items-center text-center gap-4">
@@ -51,11 +51,11 @@ const Footer = () => {
       </div>
 
       
-      <div className="w-full px-6 py-10 max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-6 gap-8 border-b border-gray-200">
+      <div className="w-full px-6 py-10 max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-6 gap-8 border-b border-gray-200">
         
         <div>
           <div className="flex items-center gap-2 mb-3">
-            <img src="/images/logo-symbol.png" alt="Logo" className="h-8 w-8" />
+            <img src="/images/home/logo-symbol.png" alt="Logo" className="h-8 w-8" />
             <span className="text-xl font-bold text-[#0D6EFD]">Brand</span>
           </div>
           <p className="text-sm mb-4">
@@ -119,14 +119,14 @@ const Footer = () => {
           <h3 className="font-semibold mb-3">Get the App</h3>
           <div className="flex flex-col gap-3">
             <img
-              src="/images/Appbtn.png"
+              src="/images/home/Appbtn.png"
               alt="App Store"
-              className="h-12 w-auto cursor-pointer"
+              className="h-12 w-124px cursor-pointer"
             />
             <img
-              src="/images/playstore.png"
+              src="/images/home/playstore.png"
               alt="Play Store"
-              className="h-12 w-auto cursor-pointer"
+              className="h-12 w-124px cursor-pointer"
             />
           </div>
         </div>

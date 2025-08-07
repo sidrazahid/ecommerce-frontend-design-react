@@ -65,7 +65,7 @@ const Navbar = () => {
   const [selectedCategory, setSelectedCategory] = useState('All category');
   const [selectedLanguage, setSelectedLanguage] = useState('English, USD');
   const [selectedCountry, setSelectedCountry] = useState({
-    label: 'English',
+    label: 'Ship to',
     image: '/images/Flags/us.png',
   });
   const [selectedGift, setSelectedGift] = useState('Gift boxes');
@@ -76,7 +76,7 @@ const Navbar = () => {
   const languages = ['English, USD', 'German, EUR'];
   const countries = [
     { label: 'Germany', image: '/images/Flags/gr.png' },
-    { label: 'Urdu', image: '/images/Flags/pk.png' },
+    { label: 'Pak', image: '/images/Flags/pk.png' },
     { label: 'French', image: '/images/Flags/fr.png' },
   ];
   const giftOptions = ['Birthday', 'Anniversary', 'Special Occasion'];
@@ -84,7 +84,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full border-t border-b border-gray-200 bg-white text-sm">
-      <div className="px-6 py-2 flex justify-between items-center max-w-screen-xl mx-auto">
+      <div className="px-6 py-2 flex justify-between items-center max-w-[1440px] mx-auto">
         
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-1 cursor-pointer">
