@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ProductDisplay from "../components/ProductDisplay";
-
+import FilterSidebar from "../components/FilterSidebar";
 
 const products = [
   {
@@ -17,10 +17,6 @@ const products = [
     shipping: "Free Shipping",
     description: "Lorem ipsum...",
     image: "/images/home/h21.png",
-    category: "Mobile accessory",
-    brand: "Apple",
-    feature: ["Metallic", "8GB Ram"],
-    condition: "Brand new",
   },
   {
     id: 2,
@@ -32,10 +28,6 @@ const products = [
     shipping: "Free Shipping",
     description: "Ut enim ad minim veniam...",
     image: "/images/home/h22.png",
-    category: "Electronics",
-    brand: "Samsung",
-    feature: ["Plastic cover"],
-    condition: "Refurbished",
   },
   {
     id: 3,
@@ -142,68 +134,12 @@ const products = [
     feature: ["Metallic", "8GB Ram"],
     condition: "Brand new",
   },
+// 
 ];
 
 const WebList = () => {
   const [view, setView] = useState("grid");
   const [sortBy, setSortBy] = useState("Featured");
-
-  const [filters, setFilters] = useState({
-    category: [], //filter remove krna h products or rating se...
-    brand: [],
-    feature: [],
-    condition: "",
-    rating: [],
-  });
-
-  
-  const filteredProducts = products.filter((product) => {
-
-    if (filters.category.length > 0 && !filters.category.includes(product.category)) {
-      return false;
-    }
-  
-    if (filters.brand.length > 0 && !filters.brand.includes(product.brand)) {
-      return false;
-    }
-   
-    if (filters.feature.length > 0 && !filters.feature.every(f => product.feature.includes(f))) {
-      return false;
-    }
-    
-    if (filters.condition && product.condition !== filters.condition) {
-      return false;
-    }
-   
-    if (filters.rating.length > 0 && !filters.rating.includes(product.rating)) {
-      return false;
-    }
-    return true;
-  });
-
- 
-  const selectedFilters = [];
-  for (const [key, values] of Object.entries(filters)) {
-    if (Array.isArray(values)) {
-      values.forEach((value) => selectedFilters.push({ type: key, value }));
-    } else if (values) {
-      selectedFilters.push({ type: key, value: values });
-    }
-  }
-
-  const handleRemoveFilter = (type, value) => {
-    if (Array.isArray(filters[type])) {
-      setFilters((prev) => ({
-        ...prev,
-        [type]: prev[type].filter((v) => v !== value),
-      }));
-    } else {
-      setFilters((prev) => ({
-        ...prev,
-        [type]: "",
-      }));
-    }
-  };
 
   return (
     <div>
@@ -212,11 +148,10 @@ const WebList = () => {
 
       <div className="max-w-[1440px] mx-auto px-6 py-3 flex flex-wrap items-center justify-between gap-3 bg-white border-b border-gray-200">
         <div className="text-gray-700 font-semibold">
-          {filteredProducts.length.toLocaleString()} items
+          {products.length.toLocaleString()} items
         </div>
 
         <div className="flex items-center gap-4">
-
           <label className="flex items-center gap-1 text-gray-600 select-none cursor-pointer">
             <input type="checkbox" className="cursor-pointer" />
             Verified only
@@ -251,13 +186,8 @@ const WebList = () => {
       </div>
 
       <main className="max-w-[1440px] mx-auto px-6 py-8 flex flex-col lg:flex-row gap-6">
-        
-        <ProductDisplay
-          filteredProducts={filteredProducts}
-          view={view}
-          selectedFilters={selectedFilters}
-          handleRemoveFilter={handleRemoveFilter}
-        />
+          <FilterSidebar/> 
+        <ProductDisplay products={products} view={view} />
       </main>
 
       <Footer />
