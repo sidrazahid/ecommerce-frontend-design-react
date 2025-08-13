@@ -43,7 +43,7 @@ const HomeBanner=({ selectedCategory, setSelectedCategory }) =>{
   const banner = bannerTexts[selectedCategory] || bannerTexts['Automobiles'];
 
   return (
-    <div className="bg-white rounded shadow p-4 flex gap-4 max-w-[1440px] mx-auto">
+    <div className="bg-white rounded shadow p-4 flex gap-4 max-w-[1210px] mx-auto">
       {/* lft */}
       <div className="w-1/5">
         <ul className="bg-gray-50 border rounded p-2 space-y-1">

@@ -1,13 +1,11 @@
-import WebMain from "./pages/WebMain"; 
-import WebList from "./pages/WebList";
+import AppRoutes from "./routes/AppRoutes";
 
 
 const App = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* <WebMain /> */}
-      <WebList/>
-      
+     
+      <AppRoutes/>
       
     </div>
   );

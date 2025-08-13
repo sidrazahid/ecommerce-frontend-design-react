@@ -23,14 +23,14 @@ const Footer = () => {
 
   const changeLanguage = (name, flag) => {
     setSelectedLang({ name, flag });
-    setLangOpen(false); // ye ak bar check krna h
+    setLangOpen(false); 
   };
 
   return (
     <footer className="bg-gray-100 text-gray-700 pt-10 ">
       
       <div className="bg-white w-full px-6 py-10 shadow">
-        <div className="max-w-screen-xl mx-auto flex flex-col items-center text-center gap-4">
+        <div className="max-w-[1210px] mx-auto flex flex-col items-center text-center gap-4">
           <h2 className="text-xl md:text-2xl font-semibold">
             Subscribe to our Newsletter
           </h2>
@@ -51,7 +51,7 @@ const Footer = () => {
       </div>
 
       
-      <div className="w-full px-6 py-10 max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-6 gap-8 border-b border-gray-200">
+      <div className="max-w-[1210px] px-6 py-10 mx-auto grid grid-cols-1 md:grid-cols-6 gap-8 border-b border-gray-200">
         
         <div>
           <div className="flex items-center gap-2 mb-3">
@@ -121,12 +121,12 @@ const Footer = () => {
             <img
               src="/images/home/Appbtn.png"
               alt="App Store"
-              className="h-12 w-124px cursor-pointer"
+              className="h-12 w-124px cursor-pointer hover:scale-[1.02] transition-transform duration-200"
             />
             <img
               src="/images/home/playstore.png"
               alt="Play Store"
-              className="h-12 w-124px cursor-pointer"
+              className="h-12 w-124px cursor-pointer hover:scale-[1.02] transition-transform duration-200"
             />
           </div>
         </div>
@@ -134,7 +134,7 @@ const Footer = () => {
 
       
       <div className="bg-white px-6 py-4 text-sm relative">
-        <div className="max-w-screen-xl mx-auto flex justify-between items-center">
+        <div className="max-w-[1210px] mx-auto flex justify-between items-center">
           <span>© ecommerce</span>
 
       

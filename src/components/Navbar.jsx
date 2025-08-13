@@ -84,7 +84,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full border-t border-b border-gray-200 bg-white text-sm">
-      <div className="px-6 py-2 flex justify-between items-center max-w-[1440px] mx-auto">
+      <div className="px-6 py-2 flex justify-between items-center max-w-[1210px] mx-auto">
         
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-1 cursor-pointer">

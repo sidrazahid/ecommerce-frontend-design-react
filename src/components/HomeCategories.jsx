@@ -35,7 +35,7 @@ const sections = [
 
 const HomeCategories = () => {
   return (
-    <div className="max-w-[1440px] mx-auto mt-8 space-y-10 ">
+    <div className="max-w-[1210px] mx-auto mt-8 space-y-10 ">
       {/* Category Sections */}
       {sections.map((section, index) => (
         <div key={index} className="grid grid-cols-5 bg-white rounded-sm shadow overflow-hidden">

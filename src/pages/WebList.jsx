@@ -146,7 +146,7 @@ const WebList = () => {
       <Header />
       <Navbar />
 
-      <div className="max-w-[1440px] mx-auto px-6 py-3 flex flex-wrap items-center justify-between gap-3 bg-white border-b border-gray-200">
+      <div className="max-w-[1210px] mx-auto px-6 py-3 flex flex-wrap items-center justify-between gap-3 bg-white border-b border-gray-200">
         <div className="text-gray-700 font-semibold">
           {products.length.toLocaleString()} items
         </div>
@@ -185,7 +185,7 @@ const WebList = () => {
         </div>
       </div>
 
-      <main className="max-w-[1440px] mx-auto px-6 py-8 flex flex-col lg:flex-row gap-6">
+      <main className="max-w-[1210px] mx-auto px-6 py-8 flex flex-col lg:flex-row gap-6">
           <FilterSidebar/> 
         <ProductDisplay products={products} view={view} />
       </main>

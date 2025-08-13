@@ -93,7 +93,7 @@ const regions = [
 
 const HomeItems = () => {
   return (
-    <div className="max-w-[1440px] mx-auto px-4 py-10 space-y-12">
+    <div className="max-w-[1210px] mx-auto px-4 py-10 space-y-12">
       {/* Recommended Items */}
       <div>
         <h2 className="text-lg font-semibold mb-4">Recommended items</h2>
@@ -153,11 +153,11 @@ const HomeItems = () => {
       {/* Suppliers by Region */}
       <div>
         <h2 className="text-lg font-semibold mb-4">Suppliers by region</h2>
-        <div className="flex flex-wrap gap-5">
+        <div className="flex flex-wrap gap-10">
           {regions.map((region, index) => (
             <div
               key={index}
-              className="flex items-center space-x-3 border border-gray-200 px-4 py-2 rounded hover:shadow-md transition cursor-pointer w-60"
+              className="flex items-center space-x-3 border border-gray-200 px-4 py-2 rounded hover:shadow-md transition cursor-pointer w-50"
             >
               <img
                 src={region.flag}

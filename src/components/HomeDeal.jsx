@@ -63,7 +63,7 @@ const HomeDeal = () => {
   targetDate.setDate(targetDate.getDate() + 5);
 
   return (
-    <div className="max-w-[1440px] mx-auto mt-8 bg-white rounded shadow p-6">
+    <div className="max-w-[1210px] mx-auto mt-8 bg-white rounded shadow p-6">
       <div className="flex items-start gap-4">
         <CountdownTimer targetDate={targetDate} />
 

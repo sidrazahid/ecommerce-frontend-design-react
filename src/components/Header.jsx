@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className="w-full shadow-md">
       
-      <div className="bg-white px-4 py-6 flex justify-between items-center max-w-[1440px] mx-auto">
+      <div className="bg-white px-4 py-6 flex justify-between items-center max-w-[1210px] mx-auto">
         
       
         <div className="flex items-center gap-2">
