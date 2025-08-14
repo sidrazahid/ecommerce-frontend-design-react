@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaSearch, FaToolbox, FaPlane, FaMapMarkerAlt } from 'react-icons/fa';
+import { useNavigate } from "react-router-dom";
 
 const recommendedItems = [
   {
@@ -92,6 +93,7 @@ const regions = [
 ];
 
 const HomeItems = () => {
+  const navigate = useNavigate();
   return (
     <div className="max-w-[1210px] mx-auto px-4 py-10 space-y-12">
       {/* Recommended Items */}
@@ -108,6 +110,7 @@ const HomeItems = () => {
                   src={item.img}
                   alt={item.name}
                   className="w-full h-56 object-contain mb-3 transform transition duration-300 group-hover:scale-105"
+                  onClick={() => navigate("/product")}
                 />
               </div>
               <p className="text-sm font-semibold mb-1">{item.price}</p>

@@ -1,6 +1,8 @@
 import { FaUser, FaEnvelope, FaShoppingCart, FaClipboardList } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <header className="w-full shadow-md">
       
@@ -8,7 +10,7 @@ const Header = () => {
         
       
         <div className="flex items-center gap-2">
-          <img src="/images/home/logo-symbol.png" alt="Logo" className="h-8 w-8" />
+          <img src="/images/home/logo-symbol.png" alt="Logo" className="h-8 w-8" onClick={() => navigate("/")}/>
           <span className="text-lg font-bold text-[#0D6EFD]">Brand</span>
         </div>
 
@@ -47,7 +49,7 @@ const Header = () => {
             <span>Orders</span>
           </div>
           <div className="flex flex-col items-center hover:text-[#0D6EFD] cursor-pointer">
-            <FaShoppingCart className="text-xl" />
+            <FaShoppingCart className="text-xl" onClick={() => navigate("/cart")} />
             <span>Cart</span>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
 const deals = [
   { name: 'Smart watches', img: '/images/home/11.png', discount: 25 },
@@ -62,6 +63,8 @@ const HomeDeal = () => {
   const targetDate = new Date();
   targetDate.setDate(targetDate.getDate() + 5);
 
+  const navigate = useNavigate();
+
   return (
     <div className="max-w-[1210px] mx-auto mt-8 bg-white rounded shadow p-6">
       <div className="flex items-start gap-4">
@@ -78,6 +81,7 @@ const HomeDeal = () => {
                   src={deal.img}
                   alt={deal.name}
                   className="w-28 h-28 object-contain mx-auto mb-2 transition-transform group-hover:scale-110"
+                  onClick={() => navigate("/list")}
                 />
                 <div className="text-sm font-medium">{deal.name}</div>
                 
